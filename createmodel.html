@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
+  <!-- Page Title -->
+  <title>FURNISEE</title>
+
+  <!-- Model Viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- Fonts Style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- Responsive Styles -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .button-area {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .images-preview,
+    .model-preview {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .image-box {
+      border: 1px solid #ddd;
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .model {
+      width: 100%;
+      height: 500px;
+      margin-top: 20px;
+    }
+
+    .model[model-viewer] {
+      width: 100%;
+      height: auto;
+    }
+
+    
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 20%;
+      height: 20%;
+    }
+
+    .image-box {
+      border: 3px solid #ddd;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .model-preview {
+      width: 50%;
+      padding-left: 20px;
+    }
+
+    .model {
+      width: 100%;
+      height: 500px;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) {
+      .image-grid {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .model-preview {
+        width: 100%;
+      }
+
+      .button-area {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body class="sub_page">
+
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section long_section px-0">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                FURNISEE
+              </span>
+            </a>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav ">
+                  <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html"> About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="furniture.html">Furnitures</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="quote_btn-container">
+                <a href="">
+                  <span>
+                    Login
+                  </span>
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </a>
+                <form class="form-inline">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </header>
+  </div>
+
+  <div class="container">
+    <div class="button-area">
+      <button id="upload-button">Upload your images</button>
+      <button id="generate-button">Generate 3D model</button>
+    </div>
+
+    <div class="image-grid">
+        <div class="image-box" style="background-image: url('sub/images/chair/chair-1.jpg');"></div>
+        <div class="image-box" style="background-image: url('sub/images/chair/chair-2.jpg');"></div>
+        <div class="image-box" style="background-image: url('sub/images/chair/chair-3.jpg');"></div>
+        <div class="image-box" style="background-image: url('sub/images/chair/chair-4.jpg');"></div>
+    </div>
+
+    <div class="model-preview">
+      <model-viewer src="sub/models/chair.glb"
+                    ios-src="sub/models/chair.usdz"
+                    alt="A 3D model of a chair"
+                    ar
+                    auto-rotate
+                    camera-controls
+                    class="model">
+      </model-viewer>
+    </div>
+  </div>
+
+
+  <!-- Rest of the body content goes here -->
+
+</body>
+</html>
